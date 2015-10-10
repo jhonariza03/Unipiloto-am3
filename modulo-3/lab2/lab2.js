@@ -1,0 +1,11 @@
+var my_array=[];
+my_array=[2,3,1,7,5,10,4,8,9,6];
+console.log(my_array);
+my_array.sort();
+console.log(my_array);
+my_array.push(11);
+console.log(my_array);
+my_array.shift();
+console.log(my_array);
+my_array.splice(5,1,"40","50");
+console.log(my_array);
