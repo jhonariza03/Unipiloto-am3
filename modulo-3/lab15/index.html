@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="tech">
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="../assets/angular.min.js"></script>
+</head>
+<body>
+	<div ng-controller="techController">
+		<h1>Languages Names</h1>
+		<ul>
+			<li ng-repeat="language in languages | orderBy:'name'">{{ language.name | uppercase}}</li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript">
+	angular.module('tech', [])
+	       .controller('techController', ['$scope', function($scope){
+	           $scope.languages = [
+                    { name: "C#"},
+                    { name: "java"},
+                    { name: "PHP"},
+                    { name: "C++"},
+                    { name: "javascript"},
+                    { name: "Cobol"}
+               ];
+	       }])
+		
+	</script>
+</body>
+</html>

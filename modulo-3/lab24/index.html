@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="initial_spi">
+<head>
+	<title>Routes AngularJS</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="../assets/angular.min.js"></script>
+	<script type="text/javascript" src="../assets/angular-route.min.js"></script>
+</head>
+<body>
+   <h1>Routes AngularJS</h1>
+
+    <div ng-include src=" 'includes/header.html' "></div>
+    <div ng-include src=" 'includes/menu.html' "></div>
+
+    <div ng-view></div>
+
+    <script>
+        angular.module('initial_spi', ['ngRoute']) /*ngRoute modulo externo de angularjs*/
+               .config(['$routeProvider', function($routeProvider){ /*routeProvider proviene del modulo externo ngRoute*/
+
+            /*
+             * `when()` cuantas veces sea necesario
+             * `otherwise()` una sola vez "OJO"
+            */
+            $routeProvider.when('/about', {
+                templateUrl : "about.html"
+               
+            })
+            .when('/contact', 
+                {
+                    templateUrl: "contact.html",
+                     controller: "contactController" /*Es posible definir el controlador de la pagina o hacerlo directamente definiendo un script en la propia pagina*/
+                })
+            .otherwise({
+                redirectTo: '/',
+                templateUrl: 'otherwise.html'
+            });
+
+               }])
+              .controller('contactController', function($scope){
+                    $scope.myName = 'Jhon Edison Ariza';
+                   
+                }
+            );
+    </script>
+</body>
+</html>
