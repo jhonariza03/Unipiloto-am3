@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript"src="../assets/angular.min.js"></script>
+</head>
+<body>	
+	<h1>Ejercicio</h1>
+	<p>Nombre: <input  type="text" ng-model="my_text" /></p>
+	<p>{{ my_text | uppercase }}</p>
+	<p>{{ my_text | lowercase }}</p>
+	<p ng-bind="my_text | uppercase"></p>
+</body>
+</html>

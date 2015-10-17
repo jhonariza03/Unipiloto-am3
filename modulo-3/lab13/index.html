@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="lab13-app">
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<div ng-controller="lab13Controller">
+		<div ng-show="revealDiv">
+			<p>
+				Luis Enrique pide refuerzos urgentes para el mercado de invierno ante la grave lesión de Rafinha con el que no podrá contar a lo largo de lo que queda de temporada. Bartomeu estaría encantado de complacer al técnico que le dio el triplete y media presidencia en las últimas elecciones, pero lo tiene crudo. Las cuentas son elocuentes y así lo sabrán los socios dentro de una semana en la asamblea del domingo 25.
+			</p>
+		</div>
+		<button ng-click="hideText()" ng-show="botonOcultar">Ocultar parrafo</button>
+		<button ng-click="showText()" ng-show="botonMostrar">Mostrar parrafo</button>
+	</div>
+	<script type="text/javascript" src="../assets/angular.min.js"></script>
+
+	<script type="text/javascript">
+
+	angular.module('lab13-app', [])
+		   .controller('lab13Controller', function($scope){
+		   		$scope.revealDiv = true;
+		   		$scope.botonOcultar=true;
+		   		$scope.botonMostrar=false;
+		   		$scope.hideText = function(){
+		   			$scope.revealDiv = false;
+		   			$scope.botonMostrar=true;
+		   			$scope.botonOcultar=false;
+
+		   		};
+		   		$scope.showText = function(){
+		   			$scope.revealDiv = true;
+		   			$scope.botonMostrar=false;
+		   			$scope.botonOcultar=true;
+		   		};
+		   });
+	</script>
+</body>
+</html>
