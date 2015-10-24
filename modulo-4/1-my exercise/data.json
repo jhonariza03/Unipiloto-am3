@@ -1,0 +1,18 @@
+[
+	{
+	"Name" : "Cloud Server",
+	"Price" : "USD 1000"
+	},
+	{
+	"Name" : "MPLS VPN",
+	"Price" : "USD 500"
+	},
+	{
+	"Name" : "Premium IP",
+	"Price" : "USD 800"
+	},
+	{
+	"Name" : "Data Center",
+	"Price" : "USD 700"
+	}
+]
