@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es-ES" ng-app="lab1a">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/lab1a.js"></script>
+	<title>lab1a</title>
+</head>
+<body ng-controller="lab1aController">
+	<h1>Informacion</h1>
+	<p>Modificar Nombre: <input  type="text" ng-model="name" /></p>
+	<p>Nombre: {{ name }} </p>
+	<p>Cedula de ciudadania: {{ id }}</p>
+	<p>Profesion: {{ profession }}</p>
+	<p>Salario: {{ salary | currency }}</p>
+	<p>Telefono: {{ phone }}</p>
+	<p>Direccion: {{ address }}</p>
+</body>
+</html>

@@ -9,8 +9,14 @@ var gulp = require('gulp'),
 * Configuración de la tarea 'demo'
 */
 gulp.task('concat-files', function(){
-	gulp.src('source/*.js')
+	gulp.src('js/*.js')
 		.pipe(concat('lab1.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('build/'))
+});
+
+gulp.task('minify-html', function() {
+  return gulp.src('index.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'))
 });
