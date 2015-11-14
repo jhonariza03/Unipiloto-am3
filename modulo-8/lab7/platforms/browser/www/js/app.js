@@ -8,17 +8,17 @@ angular.module('lab7', ['ngRoute', 'lab1', 'lab5', 'lab6'])
 	$routeProvider
 
 	.when('/lab1', {
-	    templateUrl : "views/lab1a.html",
+	    templateUrl : "views/lab1.html",
 	    controller: 'lab1Controller'
 	})
 
 	.when('/lab5', {
-		templateUrl: "views/lab1b.html",
+		templateUrl: "views/lab5.html",
 		controller: 'lab5Controller'
 	})
 
 	.when('/lab6', {
-		templateUrl: "views/lab1c.html",
+		templateUrl: "views/lab6.html",
 		controller: 'lab6Controller'
 	});
  }]);
