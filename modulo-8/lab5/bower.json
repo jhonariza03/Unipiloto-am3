@@ -1,0 +1,21 @@
+{
+  "name": "lab5",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "jhon ariza"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jhonariza03/Unipiloto-am3",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ngCordova": "~0.1.23-alpha"
+  }
+}
