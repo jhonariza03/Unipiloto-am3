@@ -23,6 +23,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.app.lab11"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.app.lab11"
         }
     },
     "dependent_plugins": {},
@@ -56,6 +59,22 @@
             "id": "cordova-plugin-camera.CameraProxy",
             "pluginId": "cordova-plugin-camera",
             "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+            "id": "cordova-plugin-dialogs.notification",
+            "pluginId": "cordova-plugin-dialogs",
+            "merges": [
+                "navigator.notification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-dialogs/www/browser/notification.js",
+            "id": "cordova-plugin-dialogs.notification_browser",
+            "pluginId": "cordova-plugin-dialogs",
+            "merges": [
+                "navigator.notification"
+            ]
         }
     ]
 }
