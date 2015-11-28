@@ -1,0 +1,15 @@
+<ion-view title="Search">
+    <ion-content padding="'true'" class="has-header">
+        <ion-list>
+            <ion-item menu-close="">
+            <ion-list>
+         		<ion-item menu-close="">{{detail.name}}</ion-item>
+	            <ion-item menu-close="">Id: {{detail.id}}</ion-item>
+	            <ion-item menu-close="">Type: {{detail.type}}</ion-item>
+	            <ion-item menu-close="">Quantity: {{detail.quantity}}</ion-item>
+	            <ion-item menu-close="">Price: {{ detail.price | currency}}</ion-item>
+        	</ion-list>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
