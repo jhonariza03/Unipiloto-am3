@@ -1,0 +1,18 @@
+<ion-view title="Product Detail">
+    <ion-content padding="'true'" class="has-header has-footer">
+        <ion-list>
+            <ion-item menu-close="">
+            <ion-list>
+                <ion-item menu-close="">{{detail.name}}</ion-item>
+                <ion-item menu-close="">Id: {{detail.id}}</ion-item>
+                <ion-item menu-close="">Type: {{detail.type}}</ion-item>
+                <ion-item menu-close="">Quantity: {{detail.quantity}}</ion-item>
+                <ion-item menu-close="">Price: {{ detail.price | currency}}</ion-item>
+            </ion-list>
+            </ion-item>
+        </ion-list>
+        <a menu-close="" href="#/product-edit/{{detail.id}}" class="button button-stable button-block ">Update Product</a>
+        <div class="spacer" style="width: 300px; height: 14px;"></div>
+        <a menu-close="" class="button button-assertive button-clear button-block button-small" ng-click="showConfirm()">Delete Product</a>
+    </ion-content>
+</ion-view>

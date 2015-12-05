@@ -1,0 +1,12 @@
+<ion-view title="Home">
+    <ion-content padding="'true'" class="has-header has-footer">
+        <ion-list>
+			<ion-item menu-close="" ng-repeat="product in list">
+            <ion-list>
+         		<ion-item menu-close=""><a href="#/product-detail/{{product.id}}">{{product.name}}</a></ion-item>
+        	</ion-list>
+            </ion-item>
+        </ion-list>
+        <a menu-close="" href="#/product-create" class="button button-dark button-block ">Create Product</a>
+    </ion-content>
+</ion-view>

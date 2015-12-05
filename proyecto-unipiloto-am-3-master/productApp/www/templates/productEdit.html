@@ -1,0 +1,24 @@
+<ion-view title="Product Edit">
+    <ion-content padding="'true'" class="has-header">
+        <form class="list">
+            <label class="item item-input" name="product_name">
+                <span class="input-label">Name</span>
+                <input type="text" placeholder="Product name" ng-model ="detail.name">
+            </label>
+            <label class="item item-input" name="type product">
+                <span class="input-label">Type</span>
+                <input type="text" placeholder="Type product" ng-model="detail.type">
+            </label>
+            <ion-item class="range range-positive">Quantity
+                <input type="range" value="20" min="0" max="1000" name="quantity_product" ng-model="detail.quantity">{{detail.quantity}}</input>
+            </ion-item>
+            <label class="item item-input" name="price_product">
+                <span class="input-label">Price</span>
+                <input type="text" placeholder="USD" ng-model="detail.price"></input>
+            </label>
+        </form>
+        <a menu-close="" href="" class="button button-dark button-block " ng-click="updateProduct()">Update Information</a>
+        <div class="spacer" style="width: 300px; height: 14px;"></div>
+        <a menu-close="" href="" class="button button-assertive button-clear button-block button-small" ng-click="showConfirm()">Delete Product</a>
+    </ion-content>
+</ion-view>
